@@ -146,6 +146,13 @@ Configuration of policy.json file
           # Add key without value to remove line from policy.json
           'compute:create:attach_network':
 
+Configuration of the default Availability Zone, if not specified in request
+
+.. code-block:: yaml
+
+    nova:
+      controller:
+        default_schedule_zone: nova
 
 Client-side RabbitMQ TLS configuration:
 ---------------------------------------
@@ -199,7 +206,6 @@ To manage content of the `cacert_file` use the `cacert` option:
 Notice:
  * The `message_queue.port` is set to **5671** (AMQPS) by default if `ssl.enabled=True`.
  * Use `message_queue.ssl.version` if you need to specify protocol version. By default is TLSv1 for python < 2.7.9 and TLSv1_2 for version above.
-
 
 Compute nodes
 -------------
